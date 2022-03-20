@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+mainClassName = 'net.toadless.rpc.Main'
+sourceCompatibility = 15
+
+group 'net.toadless'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.toadless:discord-rpc:1.0.0'
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+    implementation 'org.realityforge.org.jetbrains.annotations:org.jetbrains.annotations:1.7.0'
+}
+
+compileJava.options.encoding = 'UTF-8'
+targetCompatibility = JavaVersion.VERSION_15
